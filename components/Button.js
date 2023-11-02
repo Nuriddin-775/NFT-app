@@ -37,7 +37,7 @@ export const RectButton = ({ handlePress }) => {
         borderRadius: SIZES.extraLarge,
         padding: SIZES.small,
       }}
-      handlePress={handlePress}
+      onPress={handlePress}
     >
       <Text
         style={{
