@@ -17,7 +17,7 @@ export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
         ...SHADOWS.light,
         ...props,
       }}
-      handlePress={handlePress}
+      onPress={handlePress}
     >
       <Image
         source={imgUrl}
@@ -28,21 +28,22 @@ export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
   );
 };
 
-export const RectButton = ({ handlePress }) => {
+export const RectButton = ({ minWidth, fontSize, handlePress, ...props }) => {
   return (
     <TouchableOpacity
       style={{
-        minWidth: 120,
+        minWidth: minWidth,
         backgroundColor: COLORS.primary,
         borderRadius: SIZES.extraLarge,
         padding: SIZES.small,
+        ...props,
       }}
       onPress={handlePress}
     >
       <Text
         style={{
           fontFamily: FONTS.semiBold,
-          fontSize: SIZES.font,
+          fontSize: fontSize,
           color: COLORS.white,
           textAlign: "center",
         }}
